@@ -17,3 +17,9 @@ In general, files appended in the last step are arbitrary, so one can freely mod
 At the same time I would like to warn the user to set the **defer** parameter under write_files paragraph if writing to `/home/ubuntu`, since I personally encountered some weird configurations, which to some extent make sense since you cannot create a file under a specific user
 until the user is created.
 **defer** parameter defers writing the file until final stage, after users were created, and packages were installed. 
+
+## Test
+
+Script can be tested using [Multipass](https://multipass.run/) by running:
+
+    multipass launch --cloud-init </path/to/config/script>
